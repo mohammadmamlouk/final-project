@@ -32,9 +32,10 @@ function createTask(text) {
   };
 
   const completeBtn = document.createElement("button");
-  completeBtn.textContent = "✅";
+  completeBtn.textContent = "☑️";
   completeBtn.onclick = () => {
     span.classList.toggle("completed");
+    completeBtn.textContent = span.classList.contains("completed") ? "✅" : "☑️";
   };
 
   const deleteBtn = document.createElement("button");

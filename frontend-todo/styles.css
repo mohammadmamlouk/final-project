@@ -52,7 +52,6 @@ button {
   font-size: 16px;
   cursor: pointer;
   background-color: rgb(146, 169, 250);
-} ;
 }
 
 #task-list {
@@ -68,7 +67,6 @@ button {
   align-items: center ;
   justify-content: space-between;
   background-color:  rgb(211, 220, 250);
-};
 }
 
 .task-text.completed {
