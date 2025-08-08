@@ -1,0 +1,81 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --task-bg: #f0f0f0;
+  --completed-color: #888888;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #0c0c0c;
+  --task-bg: #1e1e1e;
+  --completed-color: #666666;
+}
+
+body {
+  margin: 0;
+  font-family: 'Times New Roman', ;
+  font-style: italic ;
+  font-weight: bold;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(177, 192, 249);
+}
+
+.task-input {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgb(146, 169, 250);
+} ;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  background-color: var(--task-bg);
+  padding: 5px;
+  margin-bottom: 10px;
+  display:flex;
+  align-items: center ;
+  justify-content: space-between;
+  background-color:  rgb(211, 220, 250);
+};
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: var(--completed-color);
+}
+
+.task-actions button {
+  margin-left: 10px;
+}
