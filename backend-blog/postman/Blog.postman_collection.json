@@ -1,0 +1,449 @@
+{
+	"info": {
+		"_postman_id": "30310ace-8f8a-4d24-a536-a286e338c3ee",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20261553",
+		"_collection_link": "https://restless-meadow-12679.postman.co/workspace/FOO~3bfea196-e5d9-426c-860e-7cf88c56eee0/collection/20261553-30310ace-8f8a-4d24-a536-a286e338c3ee?action=share&source=collection_link&creator=20261553"
+	},
+	"item": [
+		{
+			"name": "Get All posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/backend-blog/api/all_posts.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"backend-blog",
+						"api",
+						"all_posts.php"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All posts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/backend-blog/api/all_posts.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"backend-blog",
+								"api",
+								"all_posts.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Aug 2025 19:13:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.31"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "[\n    {\n        \"id\": 5,\n        \"title\": \"City Lights\",\n        \"content\": \"The city looks magical at night with all the lights.\",\n        \"user_id\": 2,\n        \"comment_count\": 1\n    },\n    {\n        \"id\": 4,\n        \"title\": \"Delicious Pasta\",\n        \"content\": \"Tried a new pasta recipe and it turned out amazing!\",\n        \"user_id\": 1,\n        \"comment_count\": 1\n    },\n    {\n        \"id\": 3,\n        \"title\": \"Hiking Adventure\",\n        \"content\": \"Explored the mountains today and the view was breathtaking!\",\n        \"user_id\": 3,\n        \"comment_count\": 1\n    },\n    {\n        \"id\": 2,\n        \"title\": \"Morning Coffee\",\n        \"content\": \"Nothing beats the aroma of freshly brewed coffee in the morning.\",\n        \"user_id\": 2,\n        \"comment_count\": 1\n    },\n    {\n        \"id\": 1,\n        \"title\": \"Sunset at the Beach\",\n        \"content\": \"Captured this beautiful sunset while walking along the shore.\",\n        \"user_id\": 1,\n        \"comment_count\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Post by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/backend-blog/api/post_by_id.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"backend-blog",
+						"api",
+						"post_by_id.php"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/backend-blog/api/post_by_id.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"backend-blog",
+								"api",
+								"post_by_id.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Aug 2025 19:15:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.31"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date"
+						}
+					],
+					"body": "{\n    \"id\": 1,\n    \"title\": \"Sunset at the Beach\",\n    \"content\": \"Captured this beautiful sunset while walking along the shore.\",\n    \"user_id\": 1,\n    \"comments\": [\n        {\n            \"id\": 1,\n            \"content\": \"Wow, this looks amazing!\",\n            \"post_id\": 1,\n            \"user_id\": 2\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "User posts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"user_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/backend-blog/api/user_posts.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"backend-blog",
+						"api",
+						"user_posts.php"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User Posts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/backend-blog/api/user_posts.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"backend-blog",
+								"api",
+								"user_posts.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Aug 2025 19:17:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.31"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 4,\n        \"title\": \"Delicious Pasta\",\n        \"content\": \"Tried a new pasta recipe and it turned out amazing!\",\n        \"user_id\": 1\n    },\n    {\n        \"id\": 1,\n        \"title\": \"Sunset at the Beach\",\n        \"content\": \"Captured this beautiful sunset while walking along the shore.\",\n        \"user_id\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Update Comment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1,\n  \"content\": \"Hiiiiiiiii\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/backend-blog/api/update_comment.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"backend-blog",
+						"api",
+						"update_comment.php"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Comment",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1,\n  \"content\": \"Hiiiiiiiii\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/backend-blog/api/update_comment.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"backend-blog",
+								"api",
+								"update_comment.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Aug 2025 19:21:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.31"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"content\":\"Hiiiiiiiii\"}"
+				}
+			]
+		},
+		{
+			"name": "Delet Post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/backend-blog/api/delete_post.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"backend-blog",
+						"api",
+						"delete_post.php"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Post",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/backend-blog/api/delete_post.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"backend-blog",
+								"api",
+								"delete_post.php"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Aug 2025 19:24:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.31"
+						},
+						{
+							"key": "Content-type",
+							"value": "text/html; charset=UTF-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"success\":\"post deleted\"}"
+				}
+			]
+		}
+	]
+}
